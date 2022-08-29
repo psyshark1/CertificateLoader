@@ -6,7 +6,7 @@
               username="ssc-db-tuz"
               password=""
               driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-              url="jdbc:sqlserver:database=SSC-Data"
+              url="jdbc:sqlserver:;database=SSC-Data"
               validationQuery="SELECT 1"
               initialSize="100"
               maxActive="500"

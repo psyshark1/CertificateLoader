@@ -60,7 +60,7 @@ public class CertLoader extends HttpServlet {
                     FileInputStream bincontentCert = new FileInputStream(certFile.getAbsolutePath());
                     if (!contentCert.equals("Некорректный пароль")) {
 
-                        Map<String, String> certContent = new HashMap<>();
+                        Map<String, String> certContent = new WeakHashMap<>();
 
                         certContent.put("certSerial", getCertContentData("Серийный номер:\\s([\\S\\s]+?)\\n", contentCert, false, false));
                         certContent.put("certFrom", getCertContentData("NotBefore:\\s([\\S\\s]+?)\\n", contentCert, true, false));
@@ -87,7 +87,7 @@ public class CertLoader extends HttpServlet {
                                     certContent.get("certKpp"),
                                     certContent.get("certOgrn"));
                             bincontentCert.close();
-                        } catch (SQLException | ClassNotFoundException | IOException throwables) {
+                        } catch (SQLException | ClassNotFoundException | IOException | NullPointerException throwables) {
                             bincontentCert.close();
                             Files.delete(Paths.get(certFile.getAbsolutePath()));
                             respData.add(GetJSON("SQL Error", "Description", throwables.toString()));
