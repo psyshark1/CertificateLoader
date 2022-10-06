@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" session="false" language="java" %>
 <html>
 <head>
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/res/cert.png" type="image/x-icon">

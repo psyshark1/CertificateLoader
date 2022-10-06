@@ -2,11 +2,12 @@ package utils;
 
 import java.io.IOException;
 import java.util.Properties;
+/*
+ * Класс с данными временной папки и таблицей БД
+ * */
 
 public class Props {
-    /*
-    * Класс с данными временной папки и таблицей БД
-    * */
+
     private static volatile Props instance;
     private static String temp_folder;
     private static String DbName;
