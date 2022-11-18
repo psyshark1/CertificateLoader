@@ -19,7 +19,7 @@ public class Dbconn {
 
     private static volatile Dbconn Instance;
     private static Connection Conn = null;
-    private static PreparedStatement Statmt = null;
+    private PreparedStatement Statmt = null;
     private final Props props = Props.getInstance();
     private ResultSet rst;
 
